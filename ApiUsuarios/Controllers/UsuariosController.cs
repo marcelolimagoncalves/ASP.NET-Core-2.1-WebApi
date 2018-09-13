@@ -1,11 +1,13 @@
 using System.Collections.Generic;
 using ApiUsuarios.Models;
 using ApiUsuarios.Repositorio;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ApiUsuarios.Controllers
 {
     [Route("api/[Controller]")]
+    [Authorize()]
     public class UsuariosController : Controller
     {
         private readonly IUsuarioRepository _usuarioRepositorio;
